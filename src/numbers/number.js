@@ -22,6 +22,8 @@ class NumberSuite {
     convertToNumber(numberString) {
         // Use this line as an additional hint when completing this challenge (casing matters).
         // return Number.<METHOD_NAME>(numberString);
+        return Number(numberString)
+        // from https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#convert_numeric_strings_and_null_to_numbers
     }
 
     /**
@@ -32,7 +34,7 @@ class NumberSuite {
      * @param {String} string
      */
     calculateStringLength(string) {
-
+        return string.length
     }
 
 }

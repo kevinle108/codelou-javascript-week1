@@ -16,8 +16,9 @@ class BooleanSuite {
      * Hint: Remember how different types are written
      */
     executeConditional() {
-        var conditional = 'false';
-
+        var conditional = 'false';   // Strings return true, need === inside conditional statement
+        conditional = false;
+        
         // Don't change anything below this line.
         if (conditional) { 
             return 'Path One';
