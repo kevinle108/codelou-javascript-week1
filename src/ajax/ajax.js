@@ -32,10 +32,17 @@ class AjaxSuite {
      */
     wordSearch(name) {
         // Implement your solution below this line
-        
-        // Implement your solution above this line
+        return new Promise((resolve, reject) => {
+            const xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = () => {
+                resolve(xhr.responseText);
+                reject('pokemon name not found');
+            }
+            xhr.open('GET', 'https://pokeapi.co/api/v2/pokemon/' + name);
+            xhr.send();
+        });
+         // Implement your solution above this line
     }
-
 }
 
 module.exports = AjaxSuite;

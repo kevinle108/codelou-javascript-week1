@@ -14,7 +14,10 @@ class DomSuite {
      */
     appendParagraphToBody() {
         // Implement your solution below this line
-
+        let p = document.createElement('p');
+        p.id = 'paragraph-1';
+        p.innerText = 'Javascript is great!';
+        document.body.appendChild(p);
         // Implement your solution above this line
     }
 
@@ -22,13 +25,12 @@ class DomSuite {
      * Challenge 2: Get reference to the paragraph tag created using the ID and
      * update its text to 'Typescript is great!'
      */
-    updateParagraphText() {
+    updateParagraphText() {        
         this.appendParagraphToBody();
         // Implement your solution below this line
-        
+        document.getElementById('paragraph-1').innerText = 'Typescript is great!';
         // Implement your solution above this line
     }
-
 }
 
 module.exports = DomSuite;
