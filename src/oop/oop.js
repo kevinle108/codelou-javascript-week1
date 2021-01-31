@@ -7,6 +7,7 @@
 /**
  * Challenge 1.1: Create a new class named 'Animal'
  * 
+ * 
  * Challenge 1.2: Create two properties on the Animal class:
  * name
  * legCount
@@ -50,7 +51,32 @@
  * property data to the parent.
  */
 
+class Animal {
+    constructor(name, legCount) {
+        this.name = name;
+        this.legCount = legCount;
+    }
+
+    printName() {
+        console.log(this.name);
+    }
+}
+
+class Dog extends Animal {
+    constructor(breed, color, noseLength) {
+        this.breed = breed;
+        this.color = color;
+        this.noseLength = noseLength;
+    }
+
+    printColorBreed() {
+        console.log(this.color + ' ' + this.breed);
+    }
+}
+
 class OOPSuite {
+
+    
 
     /**
      * Challenge 5: Update the following method to instantiate and return a new instance
