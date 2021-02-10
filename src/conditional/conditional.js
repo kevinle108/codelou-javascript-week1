@@ -14,7 +14,9 @@ class ConditionalSuite {
      * @param {Number} n - Number to be checked if odd/even
      * @returns {Boolean}
      */
-    isEven(n) {}
+    isEven(n) {
+        return n % 2 === 0;
+    }
 
     /**
      * if..else logic can be extended to include additional statements by chaining
@@ -28,7 +30,17 @@ class ConditionalSuite {
      * @param {Number} age - Age of the sheep
      * @returns {String} - 'Lamb', 'Ewe', 'Raw'
      */
-    sheepClassification(gender, age) {}
+    sheepClassification(gender, age) {
+        if (age <= 1) {
+            return "Lamb";
+        }
+        else if (gender === 'Male' && age > 1) {
+            return "Ram";   
+        } 
+        else {
+            return 'Ewe';
+        }
+    }
 
     /**
      * if..else logic can often times be shortened for readability by using ternaries.
@@ -39,7 +51,9 @@ class ConditionalSuite {
      * @param {Number} n - Number to be checked if odd/even
      * @returns {Boolean}
      */
-    isEvenTernary(n) {}
+    isEvenTernary(n) {
+        return n % 2 === 0 ? true : false;
+    }
 
     /**
      * Challenge 4. When buying and selling grain in bulk, prices are often based on the amount
@@ -59,8 +73,12 @@ class ConditionalSuite {
      * @param {Number} n - Number of units being purchased
      * @returns {Number} - Price
      */
-    getPurchasePrice(n) {}
-
+    getPurchasePrice(n) {
+        if (n < 2000) return 100;
+        else if (n >= 2000 && n <= 4000) return 95;
+        else return 90;
+    }
+        
     /**
      * In addition so simple if..else / ternary logic. We can perform logic based off a flag using
      * a switch statement. A switch statement has a flag which matches cases that are blocked off
@@ -85,7 +103,26 @@ class ConditionalSuite {
      * @param {Number} n - Numerical day of the week
      * @returns {String} - Name of the day
      */
-    whatDayIsToday(n) {}
+    whatDayIsToday(n) {
+        switch (n) {
+            case 0:
+                return 'Sunday';     
+            case 1:
+                return 'Monday';
+            case 2:
+                return 'Tuesday';
+            case 3:
+                return 'Wednesday';     
+            case 4:
+                return 'Thursday';
+            case 5:
+                return 'Friday';
+            case 6:
+                return 'Saturday';
+            default:
+                break;
+        }
+    }
 }
 
 module.exports = ConditionalSuite;
